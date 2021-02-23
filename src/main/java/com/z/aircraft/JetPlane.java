@@ -5,21 +5,23 @@ import com.z.WeatherTower;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.z.Weather.*;
+
 public class JetPlane extends AirCraft implements Flyable{
     private WeatherTower weatherTower;
 
-    private static Map<String, Coordinates> map = new HashMap<>();
-    private static Map<String, String> comments = new HashMap<>();
+    final private static Map<String, Coordinates> SHIFTS = new HashMap<>();
+    final private static Map<String, String> COMMENTS = new HashMap<>();
     static {
-        map.put("SUN", new Coordinates(0, 5, 2));
-        map.put("RAIN", new Coordinates(0, 5, 0));
-        map.put("FOG", new Coordinates(0, 1, 0));
-        map.put("SNOW", new Coordinates(0, 0, -7));
+        SHIFTS.put(SUN, new Coordinates(0, 5, 2));
+        SHIFTS.put(RAIN, new Coordinates(0, 5, 0));
+        SHIFTS.put(FOG, new Coordinates(0, 1, 0));
+        SHIFTS.put(SNOW, new Coordinates(0, 0, -7));
 
-        comments.put("SUN", "Let's enjoy the good weather and take some pics.");
-        comments.put("RAIN", "It's raining. Better watch out for lightings.");
-        comments.put("FOG", "It's fogging. I can't see anything.");
-        comments.put("SNOW", "It's snowing. We're gonna crash." );
+        COMMENTS.put(SUN, "Let's enjoy the good weather and take some pics.");
+        COMMENTS.put(RAIN, "It's raining. Better watch out for lighting.");
+        COMMENTS.put(FOG, "It's fogging. I can't see anything.");
+        COMMENTS.put(SNOW, "It's snowing. We're gonna crash." );
     }
 
     JetPlane(String name, Coordinates coordinates) {
@@ -27,7 +29,7 @@ public class JetPlane extends AirCraft implements Flyable{
     }
 
     private String getComment() {
-        return comments.get(weatherTower.getWeather(coordinates));
+        return COMMENTS.get(weatherTower.getWeather(coordinates));
     }
 
     private void printMessage() {
@@ -44,7 +46,7 @@ public class JetPlane extends AirCraft implements Flyable{
 
     @Override
     public void updateConditions() {
-        shiftAircraft(map.get(weatherTower.getWeather(coordinates)));
+        shiftAircraft(SHIFTS.get(weatherTower.getWeather(coordinates)));
         printMessage();
         tryLandingAndUnregister();
     }

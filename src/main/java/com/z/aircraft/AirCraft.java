@@ -14,7 +14,7 @@ public abstract class AirCraft {
     }
 
     private long nextId() {
-        return idCounter++;
+        return ++idCounter;
     }
 
     protected void shiftAircraft(Coordinates shift) {

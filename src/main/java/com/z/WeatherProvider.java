@@ -1,10 +1,11 @@
 package com.z;
 
 import com.z.aircraft.Coordinates;
+import static com.z.Weather.*;
 
 public class WeatherProvider {
     private static WeatherProvider weatherProvider;
-    private static String weather[] = new String[]{"RAIN", "FOG", "SUN", "SNOW"};
+    private static String weather[] = new String[]{RAIN, FOG, SUN, SNOW};
 
     private WeatherProvider() {
     }

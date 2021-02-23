@@ -28,7 +28,7 @@ public class Simulator {
         }
 
 
-//        final WeatherTower tower = new WeatherTower();
+//        WeatherTower tower = new WeatherTower();
 //
 //        AircraftFactory.newAircraft("Baloon", "dsa", 1, 1, 1).registerTower(tower);
 //        AircraftFactory.newAircraft("Baloon", "dsa2", 3, 3, 3).registerTower(tower);
