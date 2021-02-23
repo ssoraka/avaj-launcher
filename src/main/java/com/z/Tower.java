@@ -9,15 +9,11 @@ public class Tower {
     private List<Flyable> observers = new ArrayList<>();
 
     public void register(Flyable flyable){
-        System.out.print("Tower says: ");
         observers.add(flyable);
     }
 
     public void unregister(Flyable flyable){
-        System.out.print("Tower says: ");
-        if (observers.contains(flyable)) {
-            observers.remove(flyable);
-        }
+        observers.remove(flyable);
     }
 
     void conditionsChanged() {

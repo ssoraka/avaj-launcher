@@ -17,14 +17,6 @@ public abstract class AirCraft {
         return idCounter++;
     }
 
-    protected void shiftAircraft(int longitudeShift, int latitudeShift, int heightShift) {
-        coordinates = new Coordinates(
-                coordinates.getLongitude() + longitudeShift,
-                coordinates.getLatitude() + latitudeShift,
-                coordinates.getHeight() + heightShift
-        );
-    }
-
     protected void shiftAircraft(Coordinates shift) {
         coordinates = new Coordinates(
                 coordinates.getLongitude() + shift.getLongitude(),

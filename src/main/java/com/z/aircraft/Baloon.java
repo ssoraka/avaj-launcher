@@ -40,7 +40,7 @@ public class Baloon extends AirCraft implements Flyable{
         if (coordinates.getHeight() <= 0) {
             System.out.println(toString() + ": landing.");
             weatherTower.unregister(this);
-            System.out.println(toString() + " unregistered to weather tower.");
+            System.out.println("Tower says: " + toString() + " unregistered to weather tower.");
         }
     }
 
@@ -53,10 +53,8 @@ public class Baloon extends AirCraft implements Flyable{
 
     @Override
     public void registerTower(WeatherTower weatherTower) {
-        if (this.weatherTower != null)
-            this.weatherTower.unregister(this);
-        weatherTower.register(this);
         this.weatherTower = weatherTower;
-        System.out.println(toString() + " registered to weather tower.");
+        weatherTower.register(this);
+        System.out.println("Tower says: " + toString() + " registered to weather tower.");
     }
 }
