@@ -1,7 +1,6 @@
 package com.z;
 
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentLinkedQueue;
+import com.z.aircraft.AircraftFactory;
 
 public class Simulator {
     public static void main(String[] args) {

@@ -1,9 +1,8 @@
-package com.z;
+package com.z.aircraft;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 public class AircraftFactory {
 
@@ -22,12 +21,12 @@ public class AircraftFactory {
 //        BiFunction<String, Integer, BiFunction<Integer, Integer, Flyable>> f1 = (n, lng) -> (ltd, h) ->  new Baloon(n, new Coordinates(lng, ltd, h));
 
 //        вариант с 1 аргументом
-//        Function <String, Function <Integer, Function <Integer, Function <Integer, Flyable>>>> f = n -> lng -> ltd -> h -> new Baloon(n, new Coordinates(lng, ltd, h));
+//        Function <String, Function <Integer, Function <Integer, Function<Integer, Flyable>>>> f = n -> lng -> ltd -> h -> new Baloon(n, new Coordinates(lng, ltd, h));
 //        применение функции
 //        f.apply(name).apply(longitude).apply(latitude).apply(height);
 
         if (map.containsKey(type))
-            return map.get(type).apply(type + '#' + name, longitude).apply(latitude, height);
+            return map.get(type).apply(name, longitude).apply(latitude, height);
         throw new RuntimeException("no such class");
     }
 }

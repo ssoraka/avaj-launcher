@@ -1,7 +1,9 @@
 package com.z;
 
+import com.z.aircraft.Coordinates;
+
 public class WeatherTower extends Tower{
-    String getWeather(Coordinates coordinates) {
+    public String getWeather(Coordinates coordinates) {
         return WeatherProvider.getProvider().getCurrentWeather(coordinates);
     }
 

@@ -1,6 +1,6 @@
 package com.z;
 
-import java.util.Random;
+import com.z.aircraft.Coordinates;
 
 public class WeatherProvider {
     private static WeatherProvider weatherProvider;
@@ -16,7 +16,7 @@ public class WeatherProvider {
     }
 
     public String getCurrentWeather(Coordinates coordinates) {
-        int id = coordinates.getHeight() * coordinates.getLatitude() * coordinates.getLongitude();
+        int id = Math.abs(coordinates.getHeight() * coordinates.getLatitude() * coordinates.getLongitude());
         return weather[id % 4];
     }
 }
