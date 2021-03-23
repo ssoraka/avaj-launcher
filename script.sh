@@ -1,5 +1,14 @@
 #!/bin/bash
 
+
+find . -name "*.java" > sources.txt
+javac @sources.txt
+java -cp ./src/main/java ex/Simulator ./src/main/resources/scenario.txt
+exit
+
+#rm -rf sources.txt ./src/main/java/ex/*.class ./src/main/java/ex/aircraft/*.class
+
+
 rm -rf MyJar.jar
 
 ## перемещаемся в пакет
