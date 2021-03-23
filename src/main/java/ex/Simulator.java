@@ -1,7 +1,7 @@
-package com.z;
+package ex;
 
-import com.z.aircraft.AircraftFactory;
-import com.z.aircraft.Flyable;
+import ex.aircraft.AircraftFactory;
+import ex.aircraft.Flyable;
 
 import java.util.List;
 

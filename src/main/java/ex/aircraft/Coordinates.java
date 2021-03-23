@@ -1,4 +1,4 @@
-package com.z.aircraft;
+package ex.aircraft;
 
 public class Coordinates {
     private int longitude;

@@ -1,11 +1,11 @@
-package com.z.aircraft;
+package ex.aircraft;
 
-import com.z.WeatherTower;
+import ex.WeatherTower;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.z.Weather.*;
+import static ex.Weather.*;
 
 public class JetPlane extends AirCraft implements Flyable{
     private WeatherTower weatherTower;

@@ -1,4 +1,4 @@
-package com.z;
+package ex;
 
 public class Line {
     private String name;

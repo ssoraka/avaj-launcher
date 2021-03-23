@@ -1,4 +1,4 @@
-package com.z;
+package ex;
 
 public class Weather {
     public static String SUN = "SUN";

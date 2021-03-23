@@ -1,4 +1,4 @@
-package com.z.aircraft;
+package ex.aircraft;
 
 public abstract class AirCraft {
     protected long id;

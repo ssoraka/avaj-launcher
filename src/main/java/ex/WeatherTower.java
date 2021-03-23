@@ -1,6 +1,6 @@
-package com.z;
+package ex;
 
-import com.z.aircraft.Coordinates;
+import ex.aircraft.Coordinates;
 
 public class WeatherTower extends Tower{
     public String getWeather(Coordinates coordinates) {

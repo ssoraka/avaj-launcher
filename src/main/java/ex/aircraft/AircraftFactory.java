@@ -1,4 +1,4 @@
-package com.z.aircraft;
+package ex.aircraft;
 
 import java.util.HashMap;
 import java.util.Map;

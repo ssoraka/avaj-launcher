@@ -6,16 +6,16 @@ rm -rf MyJar.jar
 cd src/main/java
 
 ## компилируем проект
-javac com/z/*.java
+javac ex/*.java
 
 ## собираем архив
 echo "Manifest-Version: 1.0
-Main-Class: com.z.Simulator" >> Main.mf
-jar cmvf Main.mf MyJar.jar com/z/*
+Main-Class: ex.Simulator" >> Main.mf
+jar cmvf Main.mf MyJar.jar ex/*
 
 ## все удаляем
 rm -rf Main.mf
-rm -rf com/z/*.class com/z/aircraft/*.class
+rm -rf ex/*.class ex/aircraft/*.class
 
 ## перемещаемся в корень
 cd -

@@ -1,7 +1,7 @@
-package com.z;
+package ex;
 
-import com.z.aircraft.Coordinates;
-import static com.z.Weather.*;
+import ex.aircraft.Coordinates;
+import static ex.Weather.*;
 
 public class WeatherProvider {
     private static WeatherProvider weatherProvider;

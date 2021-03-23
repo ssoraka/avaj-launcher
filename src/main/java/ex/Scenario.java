@@ -1,4 +1,4 @@
-package com.z;
+package ex;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
