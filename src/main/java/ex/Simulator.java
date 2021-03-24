@@ -12,7 +12,7 @@ public class Simulator {
     public static void main(String[] args) {
 
         if (args.length != 1)
-            throw new RuntimeException("Wrong count of argument");
+            throw new ArgumentsCountException("Wrong count of argument");
 
         Scenario scenario = new Scenario(args[0]);
         WeatherTower tower = new WeatherTower();
