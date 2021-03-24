@@ -1,8 +1,10 @@
 #!/bin/bash
 
+#rm -rf sources.txt ./src/main/java/ex/*.class ./src/main/java/ex/aircraft/*.class
 
 find . -name "*.java" > sources.txt
 javac @sources.txt
+rm -rf sources.txt
 java -cp ./src/main/java ex/Simulator ./src/main/resources/scenario.txt
 exit
 

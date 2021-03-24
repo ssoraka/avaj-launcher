@@ -13,7 +13,7 @@ public class JetPlane extends AirCraft implements Flyable{
     final private static Map<String, Coordinates> SHIFTS = new HashMap<>();
     final private static Map<String, String> COMMENTS = new HashMap<>();
     static {
-        SHIFTS.put(SUN, new Coordinates(0, 5, 2));
+        SHIFTS.put(SUN, new Coordinates(0, 10, 2));
         SHIFTS.put(RAIN, new Coordinates(0, 5, 0));
         SHIFTS.put(FOG, new Coordinates(0, 1, 0));
         SHIFTS.put(SNOW, new Coordinates(0, 0, -7));
@@ -40,7 +40,6 @@ public class JetPlane extends AirCraft implements Flyable{
         if (coordinates.getHeight() <= 0) {
             System.out.println(toString() + ": landing.");
             weatherTower.unregister(this);
-            System.out.println("Tower says: " + toString() + " unregistered to weather tower.");
         }
     }
 
@@ -55,6 +54,5 @@ public class JetPlane extends AirCraft implements Flyable{
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         weatherTower.register(this);
-        System.out.println("Tower says: " + toString() + " registered to weather tower.");
     }
 }

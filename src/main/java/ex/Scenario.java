@@ -19,7 +19,7 @@ public class Scenario {
 
             while ((line = br.readLine()) != null) {
                 line = line.trim();
-                if (line.length() != 0) {
+                if (!line.isEmpty()) {
                     if (count != -1)
                         lines.add(new Line(line));
                     else if (line.matches("\\d+"))

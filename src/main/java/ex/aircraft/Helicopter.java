@@ -40,7 +40,6 @@ public class Helicopter extends AirCraft implements Flyable{
         if (coordinates.getHeight() <= 0) {
             System.out.println(toString() + ": landing.");
             weatherTower.unregister(this);
-            System.out.println("Tower says: " + toString() + " unregistered to weather tower.");
         }
     }
 
@@ -55,6 +54,5 @@ public class Helicopter extends AirCraft implements Flyable{
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         weatherTower.register(this);
-        System.out.println("Tower says: " + toString() + " registered to weather tower.");
     }
 }

@@ -13,10 +13,10 @@ public class Baloon extends AirCraft implements Flyable{
     final private static Map<String, Coordinates> SHIFTS = new HashMap<>();
     final private static Map<String, String> COMMENTS = new HashMap<>();
     static {
-        SHIFTS.put(SUN, new Coordinates(2, 4, 0));
-        SHIFTS.put(RAIN, new Coordinates(0, 0, 5));
-        SHIFTS.put(FOG, new Coordinates(0, 0, 3));
-        SHIFTS.put(SNOW, new Coordinates(0, 0, -13));
+        SHIFTS.put(SUN, new Coordinates(2, 0, 4));
+        SHIFTS.put(RAIN, new Coordinates(0, 0, -5));
+        SHIFTS.put(FOG, new Coordinates(0, 0, -3));
+        SHIFTS.put(SNOW, new Coordinates(0, 0, -15));
 
         COMMENTS.put(SUN, "Let's enjoy the good weather and take some pics.");
         COMMENTS.put(RAIN, "It's raining. Better watch out for lighting.");
@@ -41,7 +41,6 @@ public class Baloon extends AirCraft implements Flyable{
         if (coordinates.getHeight() <= 0) {
             System.out.println(toString() + ": landing.");
             weatherTower.unregister(this);
-            System.out.println("Tower says: " + toString() + " unregistered to weather tower.");
         }
     }
 
@@ -56,6 +55,5 @@ public class Baloon extends AirCraft implements Flyable{
     public void registerTower(WeatherTower weatherTower) {
         this.weatherTower = weatherTower;
         weatherTower.register(this);
-        System.out.println("Tower says: " + toString() + " registered to weather tower.");
     }
 }
