@@ -18,7 +18,7 @@ public abstract class Tower {
         System.out.println("Tower says: " + flyable.toString() + " unregistered to weather tower.");
     }
 
-    void conditionsChanged() {
+    protected void conditionsChanged() {
         List<Flyable> list = new ArrayList<>(observers);
         for (Flyable f : list) {
             f.updateConditions();
