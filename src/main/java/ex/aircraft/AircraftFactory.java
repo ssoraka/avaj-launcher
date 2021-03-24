@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 
-public class AircraftFactory {
+public abstract class AircraftFactory {
 
     private static Map<String, BiFunction<String, Integer, BiFunction<Integer, Integer, Flyable>>> CONSTRUCTORS;
     static {
