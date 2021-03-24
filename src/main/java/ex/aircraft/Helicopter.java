@@ -40,6 +40,7 @@ public class Helicopter extends AirCraft implements Flyable{
         if (coordinates.getHeight() <= 0) {
             System.out.println(toString() + ": landing.");
             weatherTower.unregister(this);
+            System.out.println(toString() + ": " + coordinates.toString());
         }
     }
 

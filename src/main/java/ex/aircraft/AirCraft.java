@@ -21,7 +21,7 @@ public abstract class AirCraft {
         coordinates = new Coordinates(
                 coordinates.getLongitude() + shift.getLongitude(),
                 coordinates.getLatitude() + shift.getLatitude(),
-                Math.min(coordinates.getHeight() + shift.getHeight(), 100)
+                Math.max(Math.min(coordinates.getHeight() + shift.getHeight(), 100), 0)
         );
     }
 

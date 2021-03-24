@@ -24,7 +24,6 @@ public class Baloon extends AirCraft implements Flyable{
         COMMENTS.put(SNOW, "It's snowing. We're gonna crash." );
     }
 
-
     Baloon(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
@@ -41,6 +40,7 @@ public class Baloon extends AirCraft implements Flyable{
         if (coordinates.getHeight() <= 0) {
             System.out.println(toString() + ": landing.");
             weatherTower.unregister(this);
+            System.out.println(toString() + ": " + coordinates.toString());
         }
     }
 
